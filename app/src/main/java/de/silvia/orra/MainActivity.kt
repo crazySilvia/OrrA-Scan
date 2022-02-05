@@ -11,8 +11,7 @@ import android.widget.Toast
 import de.silvia.orra.com.google.zxing.integration.android.IntentIntegrator
 
 class MainActivity : Activity(), View.OnClickListener {
-    private val formatTxt = findViewById<TextView>(R.id.scan_format)
-    private val contentTxt = findViewById<TextView>(R.id.scan_content)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,6 +22,8 @@ class MainActivity : Activity(), View.OnClickListener {
     @SuppressLint("SetTextI18n")
     public override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent) {
         val scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent)
+        val formatTxt = findViewById<TextView>(R.id.scan_format)
+        val contentTxt = findViewById<TextView>(R.id.scan_content)
         if (scanningResult != null) {
             val scanContent = scanningResult.contents
             val scanFormat = scanningResult.formatName
