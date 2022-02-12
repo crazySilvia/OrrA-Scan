@@ -1,5 +1,3 @@
-package de.silvia.orra.com.google.zxing.integration.android;
-
 /*
  * Copyright 2009 ZXing authors
  *
@@ -16,6 +14,7 @@ package de.silvia.orra.com.google.zxing.integration.android;
  * limitations under the License.
  */
 
+package de.silvia.orra.com.google.zxing.integration.android;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -50,7 +49,7 @@ import android.util.Log;
  * {@link #initiateScan()} method will prompt the user to download the application, if needed.</p>
  *
  * <p>There are a few steps to using this integration. First, your {@link Activity} must implement
- * the method {@link Activity # onActivityResult(int, int, Intent)} and include a line of code like this:</p>
+ * the method @link Activity#onActivityResult(int, int, Intent) and include a line of code like this:</p>
  *
  * <pre>{@code
  * public void onActivityResult(int requestCode, int resultCode, Intent intent) {
@@ -74,7 +73,7 @@ import android.util.Log;
  *
  * <p>Note that {@link #initiateScan()} returns an {@link AlertDialog} which is non-null if the
  * user was prompted to download the application. This lets the calling app potentially manage the dialog.
- * In particular, ideally, the app dismisses the dialog if it's still active in its {@link Activity# onPause()}
+ * In particular, ideally, the app dismisses the dialog if it's still active in its @link Activity#onPause()
  * method.</p>
  *
  * <p>You can use {@link #setTitle(String)} to customize the title of this download prompt dialog (or, use
@@ -409,7 +408,7 @@ public class IntentIntegrator {
 
     /**
      * <p>Call this from your {@link Activity}'s
-     * {@link Activity# onActivityResult(int, int, Intent)} method.</p>
+     * @link Activity#onActivityResult(int, int, Intent) method.</p>
      *
      * @param requestCode request code from {@code onActivityResult()}
      * @param resultCode result code from {@code onActivityResult()}

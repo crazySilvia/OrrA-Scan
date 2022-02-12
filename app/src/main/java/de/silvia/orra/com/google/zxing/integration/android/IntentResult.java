@@ -1,5 +1,3 @@
-package de.silvia.orra.com.google.zxing.integration.android;
-
 /*
  * Copyright 2009 ZXing authors
  *
@@ -16,7 +14,7 @@ package de.silvia.orra.com.google.zxing.integration.android;
  * limitations under the License.
  */
 
-
+package de.silvia.orra.com.google.zxing.integration.android;
 
 /**
  * <p>Encapsulates the result of a barcode scan invoked through {@link IntentIntegrator}.</p>
